@@ -1,0 +1,12 @@
+#main-container {
+  height: 500px;
+  width: 500px;
+  color: black;
+  border: 5px;
+  display: flex;
+  position: relative;
+}
+.small-boxes {
+  height: 50px;
+  width: 50px;
+}
