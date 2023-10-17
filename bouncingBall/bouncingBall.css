@@ -137,7 +137,7 @@ body {
 #container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  /* justify-content: ; */
   border: 3px;
   height: 500px;
   width: 500px;
@@ -150,5 +150,11 @@ body {
   height: 50px;
   width: 50px;
   background-color: red;
+  border-radius: 50%;
+  display: flex;
+}
+img {
+  height: 100%;
+  width: 100%;
   border-radius: 50%;
 }
