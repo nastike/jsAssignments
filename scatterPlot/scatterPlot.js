@@ -1,11 +1,11 @@
 let data = [
   { top: 2, left: 5 },
-  { top: 0, left: 10 },
-  { top: 10, left: 0 },
-  { top: 1, left: 1 },
-  { top: 2, left: 10 },
+  { top: 0, left: 100 },
+  { top: 400, left: 0 },
+  { top: 1, left: 133 },
+  { top: 2, left: 100 },
   { top: 5, left: 5 },
-  { top: 10, left: 2 },
+  { top: 100, left: 2 },
 ];
 const container = document.getElementById('container');
 container.style.position = 'absolute';
