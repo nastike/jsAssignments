@@ -15,7 +15,7 @@ function generateDataForArray(numberOfData, maxX, maxY) {
     data.push({ top: x, left: left });
   }
 }
-generateDataForArray(10, 200, 200);
+generateDataForArray(30, 400, 400);
 console.log(data);
 const container = document.getElementById('container');
 container.style.position = 'absolute';
