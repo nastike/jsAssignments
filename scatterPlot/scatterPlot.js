@@ -8,14 +8,14 @@
 //   { top: 100, left: 2 },
 // ];
 let data = [];
-function generateDataForArray(numberOfData) {
+function generateDataForArray(numberOfData, maxX, maxY) {
   for (let index = 0; index < numberOfData; index++) {
-    top = Math.floor(Math.random() * 200);
-    left = Math.floor(Math.random() * 200);
-    data.push({ top: top, left: left });
+    x = Math.floor(Math.random() * maxX);
+    left = Math.floor(Math.random() * maxY);
+    data.push({ top: x, left: left });
   }
 }
-generateDataForArray(10);
+generateDataForArray(10, 200, 200);
 console.log(data);
 const container = document.getElementById('container');
 container.style.position = 'absolute';
@@ -26,7 +26,7 @@ data.forEach((position) => {
   newDiv.id = `element${idCounter}`;
   idCounter++;
   newDiv.style.position = 'relative';
-  newDiv.style.top = position.top + 'px';
+  newDiv.style.top = position.x + 'px';
   newDiv.style.left = position.left + 'px';
 
   newDiv.style.background = 'black';
