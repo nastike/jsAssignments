@@ -18,7 +18,7 @@ function generateDataForArray(numberOfData, maxX, maxY) {
 generateDataForArray(30, 400, 400);
 console.log(data);
 const container = document.getElementById('container');
-container.style.position = 'absolute';
+container.style.position = 'relative';
 let idCounter = 1;
 
 data.forEach((position) => {
@@ -34,7 +34,9 @@ data.forEach((position) => {
   newDiv.style.width = '10px';
   newDiv.addEventListener('click', () => {
     container.removeChild(newDiv);
-    // console.log(container);
+    // container.classList.remove(newDiv);
+
+    console.log(container.classList);
   });
 
   container.appendChild(newDiv);
