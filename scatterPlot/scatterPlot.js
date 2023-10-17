@@ -8,7 +8,7 @@ let data = [
   { top: 10, left: 2 },
 ];
 const container = document.getElementById('container');
-container.style.position = 'relative';
+container.style.position = 'absolute';
 let idCounter = 1;
 
 data.forEach((position) => {
@@ -16,8 +16,8 @@ data.forEach((position) => {
   newDiv.id = `element${idCounter}`;
   idCounter++;
   newDiv.style.position = 'relative';
-  newDiv.style.left = position.left;
-  newDiv.style.top = position.top;
+  newDiv.style.top = position.top + 'px';
+  newDiv.style.left = position.left + 'px';
 
   newDiv.style.background = 'black';
   newDiv.style.height = '10px';
