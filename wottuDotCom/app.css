@@ -1,0 +1,22 @@
+body {
+  background-color: teal;
+}
+#container {
+  display: flex;
+}
+
+.content {
+  height: 30vw;
+  width: 30vw;
+  background-color: blueviolet;
+  margin: 10px;
+  text-align: center;
+}
+span {
+  display: relative;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  position: absolute;
+  top: 17vw;
+}

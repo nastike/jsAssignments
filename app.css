@@ -20,3 +20,6 @@ img {
 body {
   background-color: teal;
 }
+#wottu {
+  display: flex;
+}
