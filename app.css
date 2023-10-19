@@ -1,3 +1,13 @@
 a {
   display: block;
 }
+
+#main-container {
+  /* display: flex; */
+  justify-content: space-around;
+  height: 100vw;
+}
+
+.image {
+  height: 100%;
+}
