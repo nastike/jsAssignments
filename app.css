@@ -3,11 +3,10 @@ a {
 }
 
 #main-container {
-  /* display: flex; */
-  justify-content: space-around;
-  height: 100vw;
+  position: relative;
 }
 
-.image {
-  height: 100%;
+img {
+  height: 10%;
+  width: 10%;
 }
