@@ -16,8 +16,9 @@ function generateDataForArray(numberOfData, maxX, maxY) {
   }
 }
 generateDataForArray(30, 400, 400);
-console.log(data);
+// console.log(data);
 const container = document.getElementById('container');
+const listOfAnts = document.getElementById('list-of-ants');
 container.style.position = 'relative';
 let idCounter = 1;
 
@@ -25,18 +26,35 @@ data.forEach((position) => {
   const newDiv = document.createElement('div');
   newDiv.id = `element${idCounter}`;
   idCounter++;
+  const img = document.createElement('img');
+  img.src =
+    'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/959cb949-4db8-4404-82b4-52a2d9024651/d73v1kf-a570dd8b-fab4-4c2b-82c1-96d4c9b3dc40.png';
   newDiv.style.position = 'relative';
   newDiv.style.top = position.x + 'px';
   newDiv.style.left = position.left + 'px';
+  img.style.height = 10 + 'px';
+  img.style.width = 10 + 'px';
+  img.style.display = 'flex';
 
   newDiv.style.background = 'black';
   newDiv.style.height = '10px';
   newDiv.style.width = '10px';
+  newDiv.appendChild(img);
+  const list = document.createElement('ul');
+
+  let counter = 0;
   newDiv.addEventListener('click', () => {
+    const listItem = document.createElement('li');
+    list.appendChild(listItem);
+    listOfAnts.appendChild(list);
+
     container.removeChild(newDiv);
+    counter += 1;
+    console.log(`You smashed ${counter} ant/s`);
+
     // container.classList.remove(newDiv);
 
-    console.log(container.classList);
+    // console.log(container.classList);
   });
 
   container.appendChild(newDiv);
