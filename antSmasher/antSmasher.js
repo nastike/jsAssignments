@@ -15,7 +15,6 @@ function generateDataForArray(numberOfData, maxX, maxY) {
     data.push({ top: x, left: left });
   }
 }
-generateDataForArray(30, 400, 400);
 // console.log(data);
 const container = document.getElementById('container');
 const listOfAnts = document.getElementById('list-of-ants');
@@ -23,9 +22,12 @@ container.style.position = 'relative';
 let idCounter = 1;
 let counter = 0;
 
+generateDataForArray(30, 400, 400);
 data.forEach((position) => {
   const newDiv = document.createElement('div');
   newDiv.id = `element${idCounter}`;
+
+  console.log(data);
   idCounter++;
   const img = document.createElement('img');
   img.src =

@@ -6,20 +6,25 @@ let tags = document.getElementsByTagName('div');
 
 let smallBox = document.getElementById('small-box');
 let topPosition = 10;
-let dy = 1;
+let sidePosition = 10;
+let dy = 10;
+let dx = 5;
 
 smallBox.style.position = 'relative';
 setInterval(() => {
   if (topPosition > 450) {
-    dy = -1;
-  } else if (topPosition < 0) {
-    dy = 1;
+    dy = -10;
+    dx = -10;
+  } else if (topPosition < 0 && sidePosition < 0) {
+    dy = 10;
+    dx = 10;
   }
 
   topPosition += dy * 5;
+  sidePosition += dx * 2;
 
   smallBox.style.top = topPosition + 'px';
-  smallBox.style.left = topPosition + 'px';
+  smallBox.style.left = sidePosition + 'px';
 }, 100);
 
 // console.log(tags);
