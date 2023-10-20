@@ -21,6 +21,7 @@ const container = document.getElementById('container');
 const listOfAnts = document.getElementById('list-of-ants');
 container.style.position = 'relative';
 let idCounter = 1;
+let counter = 0;
 
 data.forEach((position) => {
   const newDiv = document.createElement('div');
@@ -42,7 +43,6 @@ data.forEach((position) => {
   newDiv.appendChild(img);
   const list = document.createElement('ul');
 
-  let counter = 0;
   newDiv.addEventListener('click', () => {
     const listItem = document.createElement('li');
     list.appendChild(listItem);
