@@ -20,8 +20,8 @@ setInterval(() => {
     dx = 10;
   }
 
-  topPosition += dy * 5;
-  sidePosition += dx * 2;
+  topPosition += dy * 2;
+  sidePosition += dx * 10;
 
   smallBox.style.top = topPosition + 'px';
   smallBox.style.left = sidePosition + 'px';
