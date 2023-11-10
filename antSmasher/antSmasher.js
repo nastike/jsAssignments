@@ -8,6 +8,7 @@
 //   { top: 100, left: 2 },
 // ];
 let data = [];
+let reset = document.getElementById('reset');
 function generateDataForArray(numberOfData, maxX, maxY) {
   for (let index = 0; index < numberOfData; index++) {
     x = Math.floor(Math.random() * maxX);
@@ -60,4 +61,7 @@ data.forEach((position) => {
   });
 
   container.appendChild(newDiv);
+});
+reset.addEventListener('click', () => {
+  location.reload();
 });

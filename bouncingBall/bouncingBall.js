@@ -3,6 +3,7 @@
 
 let smallBall = document.getElementById('container');
 let tags = document.getElementsByTagName('div');
+let reset = document.getElementById('reset');
 
 let smallBox = document.getElementById('small-box');
 let topPosition = 10;
