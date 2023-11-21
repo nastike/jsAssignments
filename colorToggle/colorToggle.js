@@ -1,10 +1,8 @@
-const colorToggle = document.getElementById('color-toggle');
-const buttonTagSelector = document.getElementById('btn');
-let colors = ['red', 'blue', 'green', 'yellow'];
-let currentColorIndex = 0;
-
-buttonTagSelector.addEventListener('click', () => {
-  colorToggle.style.background = colors[currentColorIndex];
-
-  currentColorIndex = (currentColorIndex + 1) % colors.length;
+const colorToggleArea = document.getElementById('color-toggle');
+const colorToggleButton = document.getElementById('btn');
+const colors = ['teal', 'yellow', '#ff6600', 'maroon'];
+let currentIndex = 0;
+colorToggleButton.addEventListener('click', () => {
+  colorToggleArea.style.background = colors[currentIndex];
+  currentIndex = (currentIndex + 1) % colors.length;
 });
