@@ -1,12 +1,3 @@
-// let data = [
-//   { top: 2, left: 5 },
-//   { top: 0, left: 100 },
-//   { top: 400, left: 0 },
-//   { top: 1, left: 133 },
-//   { top: 2, left: 100 },
-//   { top: 5, left: 5 },
-//   { top: 100, left: 2 },
-// ];
 let data = [];
 function generateDataForArray(numberOfData, maxX, maxY) {
   for (let index = 0; index < numberOfData; index++) {
@@ -16,6 +7,7 @@ function generateDataForArray(numberOfData, maxX, maxY) {
   }
 }
 generateDataForArray(30, 400, 400);
+// console.log(data)
 console.log(data);
 const container = document.getElementById('container');
 container.style.position = 'absolute';
