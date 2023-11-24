@@ -24,10 +24,8 @@ function initAnts(numberOfAnts = 10) {
     element.style.width = `${ANT_SIZE}px`;
 
     element.onclick = () => {
-      element.style.backgroundColor = 'red';
-      setTimeout(() => {
-        element.style.backgroundColor = 'black';
-      }, 1000);
+      $container.removeChild(element);
+      data.splice(data.indexOf(ant), 1);
     };
     $container.appendChild(element);
 
@@ -36,6 +34,12 @@ function initAnts(numberOfAnts = 10) {
   }
   return data;
   // console.log(data);
+}
+
+function detectAntColision(ant1, ant2) {
+  if (ant1 === ant2) {
+    return false;
+  }
 }
 
 function plotAnts(ants) {
@@ -73,6 +77,7 @@ const ants = initAnts();
 plotAnts(ants);
 
 setInterval(() => {
+  // console.log(ants);
   updateAnts(ants);
   plotAnts(ants);
 }, 60);
