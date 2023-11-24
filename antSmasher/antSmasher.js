@@ -29,7 +29,7 @@ function initAnts(numberOfAnts = 10) {
     };
     $container.appendChild(element);
 
-    const ant = { x, y, dx, dy, element };
+    const ant = { id: i, x, y, dx, dy, element };
     data.push(ant);
   }
   return data;
@@ -37,9 +37,13 @@ function initAnts(numberOfAnts = 10) {
 }
 
 function detectAntColision(ant1, ant2) {
-  if (ant1 === ant2) {
+  if (ant1.id === ant2.id) {
     return false;
   }
+  const xCollision = ant1.x + ANT_SIZE >= ant2.x && ant1.x <= ant2.x + ANT_SIZE;
+  const yCollision = ant1.y + ANT_SIZE >= ant2.y && ant1.y <= ant2.y + ANT_SIZE;
+
+  return xCollision && yCollision;
 }
 
 function plotAnts(ants) {
@@ -70,10 +74,21 @@ function updateAnts(ants) {
       ant.y = WORLD_SIZE - ANT_SIZE;
       ant.dy = -ant.dy;
     }
+    ants.forEach((targetAnt) => {
+      const hasCollided = detectAntColision(ant, targetAnt);
+      // console.log(hasCollided);
+      if (hasCollided) {
+        ant.dx = -ant.dx;
+        ant.dy = -ant.dy;
+        targetAnt.dx = -targetAnt.dx;
+        targetAnt.dy = -targetAnt.dy;
+      }
+    });
+    // detectAntColision();
   });
 }
 
-const ants = initAnts();
+const ants = initAnts(100);
 plotAnts(ants);
 
 setInterval(() => {
