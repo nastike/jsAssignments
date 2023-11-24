@@ -1,4 +1,14 @@
+let data = [];
+function generateDataForArray(numberOfData, maxX, maxY) {
+  for (let index = 0; index < numberOfData; index++) {
+    x = Math.floor(Math.random() * maxX);
+    left = Math.floor(Math.random() * maxY);
+    data.push({ top: x, left: left });
+  }
+}
+
 const container = document.getElementById('container');
+let idCounter = 1;
 const bouncingBalls = [
   {
     element: document.getElementById('small-box'),
@@ -9,9 +19,9 @@ const bouncingBalls = [
   },
   {
     element: document.getElementById('secondBall'),
-    top: 10,
+    top: 450,
     left: 400,
-    dy: 10,
+    dy: -10,
     dx: 0,
   },
 ];
