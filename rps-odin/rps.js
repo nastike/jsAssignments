@@ -61,12 +61,12 @@ const calculateWinner = (cpu, user)=>{
         return  'user wins'
     } 
     if(cpu === 'scissor' && user ==='paper'){
-        userWins +=1;
-        return  'user wins'
-    }
-    if(cpu === 'scissor' && user ==='paper'){
         cpuWins +=1;
         return  'cpu wins'
+    }
+    if(cpu === 'scissor' && user ==='rock'){
+        user +=1;
+        return  'user wins'
     }
 
   
